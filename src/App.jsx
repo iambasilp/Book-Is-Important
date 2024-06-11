@@ -5,7 +5,7 @@ import ReadNow from "./components/ReadNow";
 
 const App = () => {
   return (
-    <div className="bg-white">
+    <div className="bg-white w-full">
       <Header />
       <Home />
       <About />

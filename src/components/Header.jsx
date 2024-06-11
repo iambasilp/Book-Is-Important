@@ -1,6 +1,6 @@
 const Header = () => {
     return (
-      <div className="navbar bg-white text-blue-900 flex justify-between">
+      <div className="navbar bg-white text-blue-900 flex justify-between ">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -19,7 +19,7 @@ const Header = () => {
             </div>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-white text-blue-900 rounded-box w-52"
+              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-white text-black-900 rounded-box w-52"
             >
               
               <li>

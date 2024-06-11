@@ -2,13 +2,13 @@ const About = () => {
     return (
       <div className="hero bg-base-200 min-h-screen" id="about">
         <div className="hero-content flex-col lg:flex-row-reverse">
-          <div className="lg:w-1/2">
+          <div className="max-w-[500px] lg:max-w-xl ">
             <img
               src="https://cdn.pixabay.com/photo/2021/01/27/07/19/baby-5953965_1280.jpg"
-              className="max-w-xl rounded-lg shadow-2xl"
+              className="rounded-lg shadow-2xl"
             />
           </div>
-          <div className="lg:w-1/2 py-12 alig">
+          <div className="lg:w-1/2 py-12 alig ">
             <h1 className="text-5xl font-bold">About Reading</h1>
             <p className="mt-6">
               Reading enriches our minds, expands our horizons, and fosters

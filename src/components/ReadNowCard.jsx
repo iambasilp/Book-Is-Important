@@ -1,6 +1,6 @@
-const ReadNowCard = ({ img, title, description, buttonUrl, isRead }) => {
+const ReadNowCard = ({ img, title, description, buttonUrl, isRead, onAction }) => {
   return (
-    <a href={buttonUrl} className="carousel-item ">
+    <a href={buttonUrl} className="carousel-item" onClick={onAction}>
       <div className="card w-96 bg-base-100 shadow-xl hover:bg-blue-600 hover:text-white transition-all">
         <div className="object-cover">
           <img src={img} alt="card image" className="w-full rounded-box" />

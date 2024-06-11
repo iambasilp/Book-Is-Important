@@ -7,6 +7,7 @@ const ReadNow = () => {
       description:
         "Discover the world of art and design with our collection of books.",
       buttonUrl: "https://en.wikipedia.org/wiki/Art",
+      isRead:true,
     },
     {
       imgSrc: "https://picsum.photos/400/300?random=2",
@@ -14,6 +15,7 @@ const ReadNow = () => {
       description:
         "Explore the latest advancements in science and technology with our collection of books.",
       buttonUrl: "https://en.wikipedia.org/wiki/Science",
+      isRead:false,
     },
     {
       imgSrc: "https://picsum.photos/400/300?random=3",
@@ -21,6 +23,7 @@ const ReadNow = () => {
       description:
         "Learn about the rich history and culture of the world with our collection of books.",
       buttonUrl: "https://en.wikipedia.org/wiki/History",
+      isRead:false,
     },
     {
       imgSrc: "https://picsum.photos/400/300?random=4",
@@ -28,6 +31,7 @@ const ReadNow = () => {
       description:
         "Escape into the world of fiction and fantasy with our collection of books.",
       buttonUrl: "https://en.wikipedia.org/wiki/Fiction",
+      isRead:true
     },
     {
       imgSrc: "https://picsum.photos/400/300?random=5",
@@ -35,6 +39,7 @@ const ReadNow = () => {
       description:
         "Discover the secrets to success and personal growth with our collection of books.",
       buttonUrl: "https://en.wikipedia.org/wiki/Self-improvement",
+      isRead:true
     },
     {
       imgSrc: "https://picsum.photos/400/300?random=6",
@@ -42,6 +47,7 @@ const ReadNow = () => {
       description:
         "Explore the world and discover new adventures with our collection of books.",
       buttonUrl: "https://en.wikipedia.org/wiki/Travel",
+      isRead:false,
     },
   ];
 
@@ -58,6 +64,8 @@ const ReadNow = () => {
               title={cardItem.title}
               description={cardItem.description}
               buttonUrl={cardItem.buttonUrl}
+              isRead={cardItem.isRead}
+
             />
           );
         })}

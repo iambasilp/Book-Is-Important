@@ -48,7 +48,7 @@ const ReadNow = () => {
   return (
     <div className="min-h-screen flex flex-col justify-center align-middle mt-10" id="ReadNow">
       <h1 className="read-heading text-center w-full text-black text-4xl  text-blue-500 hover:text-red-500 font-bold">Read Now</h1>
-      <p className="m-auto max-w-[900px] mt-2 text-center text-slate-500">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci possimus eos magni repudiandae eligendi assumenda, in architecto at beatae molestias aut dolor, nesciunt nostrum facilis temporibus placeat error autem est aperiam. Odio nesciunt maxime enim facilis. Voluptatibus, alias quia, fuga aperiam quasi quibusdam natus</p>
+      <p className="m-auto max-w-[900px] mt-5 text-center text-slate-500">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci possimus eos magni repudiandae eligendi assumenda, in architecto at beatae molestias aut dolor, nesciunt nostrum facilis temporibus placeat error autem est aperiam. Odio nesciunt maxime enim facilis. Voluptatibus, alias quia, fuga aperiam quasi quibusdam natus</p>
       <div className="carousel carousel-end rounded-box gap-6 m-20">
         {cardData.map((cardItem, cardIndex) => {
           return (

@@ -1,12 +1,15 @@
 import Header from "./components/Header";
 import Home from "./components/Home";
+import About from "./components/About";
+import ReadNow from "./components/ReadNow";
 
 const App = () => {
   return (
     <div className="bg-white">
       <Header />
       <Home />
-
+      <About />
+      <ReadNow />
     </div>
   );
 };

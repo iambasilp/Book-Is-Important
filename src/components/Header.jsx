@@ -39,10 +39,10 @@ const Header = () => {
               <a className="hover:bg-blue-100" href="#">Home</a>
             </li>
             <li>
-            <a className="hover:bg-blue-100">About</a>
+            <a className="hover:bg-blue-100" href="#about">About</a>
             </li>
             <li>
-              <a className="hover:bg-blue-100">Service</a>
+              <a className="hover:bg-blue-100" href="#ReadNow">Read Now</a>
             </li>
           </ul>
         </div>

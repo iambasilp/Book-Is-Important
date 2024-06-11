@@ -2,34 +2,54 @@ import ReadNowCard from "./ReadNowCard";
 const ReadNow = () => {
   const cardData = [
     {
-      imgSrc:
-        "https://cdn.pixabay.com/photo/2018/05/13/14/52/boys-3396713_1280.jpg",
-      title: "Read Children Now",
+      imgSrc: "https://picsum.photos/400/300?random=1",
+      title: "Art and Design",
       description:
-        "Immerse your children in the magical world of books. Foster their imagination, boost their knowledge, and nurture their love for reading with our specially curated collection.",
-      buttonText: "Read Now",
+        "Discover the world of art and design with our collection of books.",
+      buttonUrl: "https://en.wikipedia.org/wiki/Art",
     },
     {
-      imgSrc:
-        "https://cdn.pixabay.com/photo/2019/06/29/01/24/kids-4305233_1280.jpg",
-      title: "Explore New Techonology",
+      imgSrc: "https://picsum.photos/400/300?random=2",
+      title: "Science and Technology",
       description:
-        "Discover new adventures and tales that captivate young minds. Our collection is designed to inspire and engage children of all ages.",
-      buttonText: "Explore Now",
+        "Explore the latest advancements in science and technology with our collection of books.",
+      buttonUrl: "https://en.wikipedia.org/wiki/Science",
     },
     {
-      imgSrc:
-        "https://cdn.pixabay.com/photo/2016/11/14/03/06/kids-1822685_1280.jpg",
-      title: "Learning Through Fun",
+      imgSrc: "https://picsum.photos/400/300?random=3",
+      title: "History and Culture",
       description:
-        "Combine learning with fun through our interactive and educational books. Perfect for making reading an enjoyable experience for kids.",
-      buttonText: "Learn More",
+        "Learn about the rich history and culture of the world with our collection of books.",
+      buttonUrl: "https://en.wikipedia.org/wiki/History",
+    },
+    {
+      imgSrc: "https://picsum.photos/400/300?random=4",
+      title: "Fiction and Fantasy",
+      description:
+        "Escape into the world of fiction and fantasy with our collection of books.",
+      buttonUrl: "https://en.wikipedia.org/wiki/Fiction",
+    },
+    {
+      imgSrc: "https://picsum.photos/400/300?random=5",
+      title: "Self-Improvement and Personal Development",
+      description:
+        "Discover the secrets to success and personal growth with our collection of books.",
+      buttonUrl: "https://en.wikipedia.org/wiki/Self-improvement",
+    },
+    {
+      imgSrc: "https://picsum.photos/400/300?random=6",
+      title: "Travel and Adventure",
+      description:
+        "Explore the world and discover new adventures with our collection of books.",
+      buttonUrl: "https://en.wikipedia.org/wiki/Travel",
     },
   ];
 
   return (
-    <div className="" id="ReadNow">
-      <div className="carousel carousel-end rounded-box">
+    <div className="min-h-screen flex flex-col justify-center align-middle mt-10" id="ReadNow">
+      <h1 className="read-heading text-center w-full text-black text-4xl  text-blue-500 hover:text-red-500 font-bold">Read Now</h1>
+      <p className="m-auto max-w-[900px] mt-2 text-center text-slate-500">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci possimus eos magni repudiandae eligendi assumenda, in architecto at beatae molestias aut dolor, nesciunt nostrum facilis temporibus placeat error autem est aperiam. Odio nesciunt maxime enim facilis. Voluptatibus, alias quia, fuga aperiam quasi quibusdam natus</p>
+      <div className="carousel carousel-end rounded-box gap-6 m-20">
         {cardData.map((cardItem, cardIndex) => {
           return (
             <ReadNowCard
@@ -37,7 +57,7 @@ const ReadNow = () => {
               img={cardItem.imgSrc}
               title={cardItem.title}
               description={cardItem.description}
-              buttonText={cardItem.buttonText}
+              buttonUrl={cardItem.buttonUrl}
             />
           );
         })}

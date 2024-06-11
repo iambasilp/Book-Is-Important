@@ -1,18 +1,19 @@
-const ReadNowCard = ({ img, title, description, buttonText }) => {
+const ReadNowCard = ({ img, title, description, buttonUrl }) => {
   return (
     <div className="carousel-item">
       <div className="card w-96 bg-base-100 shadow-xl">
-        <figure>
-          <img
-            src={img}
-            alt="Shoes"
-          />
-        </figure>
+        <div className="object-cover">
+          <img src={img} alt="card image" className="w-full rounded-box" />
+        </div>
+
         <div className="card-body">
-          <h2 className="card-title">{title}</h2>
+          <h2 className="card-title">
+            {title}
+          </h2>
           <p>{description}</p>
           <div className="card-actions justify-end">
-            <button className="btn btn-primary">{buttonText}</button>
+            <div className="badge badge-outline">Fashion</div>
+            <div className="badge badge-outline">Products</div>
           </div>
         </div>
       </div>

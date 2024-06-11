@@ -5,3 +5,8 @@
 html{
   scroll-behavior: smooth;
 }
+.carousel {
+  align-items: center;
+}
+
+

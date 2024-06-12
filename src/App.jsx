@@ -2,6 +2,7 @@ import Header from "./components/Header";
 import Home from "./components/Home";
 import About from "./components/About";
 import ReadNow from "./components/ReadNow";
+import BenifitsOfReading from "./components/BenifitsOfReading";
 
 const App = () => {
   return (
@@ -10,6 +11,7 @@ const App = () => {
       <Home />
       <About />
       <ReadNow />
+      <BenifitsOfReading />
     </div>
   );
 };

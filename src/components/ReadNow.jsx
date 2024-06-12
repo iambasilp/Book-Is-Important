@@ -1,7 +1,12 @@
+import { useState } from "react";
 import ReadNowCard from "./ReadNowCard";
 import ReadNowFilterTool from "./ReadNowFilterTool";
+
 const ReadNow = () => {
-  const cardData = [
+
+
+
+  let cardData = [
     {
       imgSrc: "https://picsum.photos/400/300?random=1",
       title: "Art and Design",
@@ -51,28 +56,46 @@ const ReadNow = () => {
       isRead: false,
     },
   ];
+  const [data,setData] = useState(cardData)
+  function onListChange(event) {
+     let value = event.target.value
+     let newList = cardData.filter((item)=>{
+        if(value === "All"){
+          return true;
+        }else if(value === "Read"){
+          return item.isRead === true;
+        }else if(value === "Unread"){
+          return item.isRead === false;
+        }
+        return false
+     })
+     console.log(newList)
+     setData(newList)
 
+  }
   return (
+   
     <div
       className="min-h-screen flex flex-col justify-center align-middle mt-10"
       id="ReadNow"
     >
-      <ReadNowFilterTool>
-      <div className="readnow_content">
-        <h1 className="read-heading text-center w-full text-black text-4xl  text-blue-500 hover:text-red-500 font-bold">
-          Read Now
-        </h1>
-        <p className="m-auto max-w-[900px] mt-5 text-center text-slate-500">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci
-          possimus eos magni repudiandae eligendi assumenda, in architecto at
-          beatae molestias aut dolor, nesciunt nostrum facilis temporibus
-          placeat error autem est aperiam. Odio nesciunt maxime enim facilis.
-          Voluptatibus, alias quia, fuga aperiam quasi quibusdam natus
-        </p>
-      </div>
+      {console.log("Render")}
+      <ReadNowFilterTool onselectAction={onListChange}>
+        <div className="readnow_content">
+          <h1 className="read-heading text-center w-full text-black text-4xl  text-blue-500 hover:text-red-500 font-bold">
+            Read Now
+          </h1>
+          <p className="m-auto max-w-[900px] mt-5 text-center text-slate-500">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci
+            possimus eos magni repudiandae eligendi assumenda, in architecto at
+            beatae molestias aut dolor, nesciunt nostrum facilis temporibus
+            placeat error autem est aperiam. Odio nesciunt maxime enim facilis.
+            Voluptatibus, alias quia, fuga aperiam quasi quibusdam natus
+          </p>
+        </div>
       </ReadNowFilterTool>
-      <div className="carousel carousel-end rounded-box gap-6 m-20">
-        {cardData.map((cardItem, cardIndex) => {
+      <div className="carousel carousel-end rounded-box gap-6 m-20 transition-all">
+        {data.map((cardItem, cardIndex) => {
           return (
             <ReadNowCard
               key={cardIndex}
@@ -84,6 +107,7 @@ const ReadNow = () => {
               onAction={() => {
                 alert("You have clicked article card");
               }}
+              
             />
           );
         })}

@@ -37,23 +37,23 @@ const Counter = () => {
             frustrations.
           </p>
           <div className="flex justify-center gap-2 mt-10">
-          <button className="btn bg-green-800" onClick={handleMultiple}>
+          <button className="btn bg-green-800 hover:bg-white text-black" onClick={handleMultiple}>
               Multiples
             </button>
-            <button className="btn bg-green-800" onClick={handleDivision}>
+            <button className="btn bg-green-800 hover:bg-white text-black" onClick={handleDivision}>
               Division
             </button>
-            <button className="btn btn-primary" onClick={handleIncreament}>
+            <button className="btn btn-primary hover:bg-white text-black" onClick={handleIncreament}>
               Increament
             </button>
          
           </div>
           <h1 className="py-6">{count}</h1>
           <div className="flex justify-center gap-10">
-            <button className="btn btn-primary" onClick={handleDecreament}>
+            <button className="btn btn-primary hover:bg-white text-black" onClick={handleDecreament}>
               Decreament
             </button>
-            <button className="btn bg-red-800" onClick={handleReset}>
+            <button className="btn bg-red-800 hover:bg-white text-black" onClick={handleReset}>
               Reset
             </button>
           </div>

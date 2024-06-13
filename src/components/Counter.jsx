@@ -1,14 +1,15 @@
 import React, { useState } from "react";
 
 const Counter = () => {
-   const [count,setCount] = useState(0)
-   function handleIncreament(){
-         setCount(count+1)
-   }
-   function handleDecreament(){
-       setCount(count-1)
-
-   }
+  const [count, setCount] = useState(0);
+  function handleIncreament() {
+    setCount((state) => {
+      return state + 1;
+    });
+  }
+  function handleDecreament() {
+    setCount(count - 1);
+  }
   return (
     <div className="counter min-h-screen bg-base-200 ">
       <div className="counter-content text-center flex justify-center align-middle pt-20">
@@ -22,9 +23,13 @@ const Counter = () => {
             just how composed you can remain when faced with life's little
             frustrations.
           </p>
-          <button className="btn btn-primary mt-10" onClick={handleIncreament}>Increament</button>
+          <button className="btn btn-primary mt-10" onClick={handleIncreament}>
+            Increament
+          </button>
           <h1 className="py-6">{count}</h1>
-          <button className="btn btn-primary" onClick={handleDecreament}>Decreament</button>
+          <button className="btn btn-primary" onClick={handleDecreament}>
+            Decreament
+          </button>
         </div>
       </div>
     </div>

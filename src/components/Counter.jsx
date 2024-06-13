@@ -10,6 +10,19 @@ const Counter = () => {
   function handleDecreament() {
     setCount(count - 1);
   }
+  function handleReset() {
+    setCount(0);
+  }
+  function handleMultiple(){
+    setCount((state)=>{
+        return state*2
+    })
+  }
+  function handleDivision(){
+    setCount((state)=>{
+        return state/2
+    })
+  }
   return (
     <div className="counter min-h-screen bg-base-200 ">
       <div className="counter-content text-center flex justify-center align-middle pt-20">
@@ -23,13 +36,27 @@ const Counter = () => {
             just how composed you can remain when faced with life's little
             frustrations.
           </p>
-          <button className="btn btn-primary mt-10" onClick={handleIncreament}>
-            Increament
-          </button>
+          <div className="flex justify-center gap-2 mt-10">
+          <button className="btn bg-green-800" onClick={handleMultiple}>
+              Multiples
+            </button>
+            <button className="btn bg-green-800" onClick={handleDivision}>
+              Division
+            </button>
+            <button className="btn btn-primary" onClick={handleIncreament}>
+              Increament
+            </button>
+         
+          </div>
           <h1 className="py-6">{count}</h1>
-          <button className="btn btn-primary" onClick={handleDecreament}>
-            Decreament
-          </button>
+          <div className="flex justify-center gap-10">
+            <button className="btn btn-primary" onClick={handleDecreament}>
+              Decreament
+            </button>
+            <button className="btn bg-red-800" onClick={handleReset}>
+              Reset
+            </button>
+          </div>
         </div>
       </div>
     </div>

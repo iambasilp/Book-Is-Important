@@ -6,7 +6,7 @@ const Home = () => {
       className="hero min-h-screen"
       style={{
         backgroundImage:
-          "url(https://cdn.pixabay.com/photo/2016/11/29/12/51/man-1869624_1280.jpg)",
+          "url(https://cdn.pixabay.com/photo/2016/11/29/02/56/blonde-1866951_1280.jpg)",
       }}
     >
       <div className="hero-overlay bg-opacity-60"></div>

@@ -18,6 +18,7 @@ const NewsApi = () => {
         const responseData = await response.json();
         setData(responseData.articles);
       } catch (error) {
+        console.log(error);
         setError(error);
       } finally {
         setLoading(false);

@@ -10,7 +10,7 @@ const NewsApi = () => {
     const fetchDataFromApi = async () => {
       try {
         const response = await fetch(
-          "https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=86bc2d8b350e4181954fd9714769a355"
+          "https://newsapi.org/v2/everything?domains=wsj.com&apiKey=86bc2d8b350e4181954fd9714769a355"
         );
         if (!response.ok) {
           throw new Error("Error here");

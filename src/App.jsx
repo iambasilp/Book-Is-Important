@@ -5,6 +5,7 @@ import ReadNow from "./components/ReadNow";
 import BenifitsOfReading from "./components/BenifitsOfReading";
 import Counter from "./components/Counter";
 import NewsApi from "./components/News/NewsApi";
+import Contact from "./components/Contact";
 const App = () => {
   return (
     <div className="bg-white w-full">
@@ -15,7 +16,7 @@ const App = () => {
       <BenifitsOfReading />
       <Counter />
       <NewsApi />
-    
+      <Contact/>
     </div>
   );
 };

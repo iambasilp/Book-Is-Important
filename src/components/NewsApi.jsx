@@ -1,14 +1,22 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 
 const NewsApi = () => {
+const [data,setData] = useState([])
     useEffect(()=>{
-       console.log("hello")
+       const fetchDataFromApi = async ()=>{
+           const response = await fetch("https://newsapi.org/v2/top-headlines?country=us&apiKey=86bc2d8b350e4181954fd9714769a355")
+           const responseData = await response.json()
+           setData(responseData)
+            console.log(responseData);
+       }
+       fetchDataFromApi()
     },[])
   return (
-    <div className='min-h-full'>
-      News api
+    <div>
+      <h1>Helo data</h1>
     </div>
   )
 }
+
 
 export default NewsApi

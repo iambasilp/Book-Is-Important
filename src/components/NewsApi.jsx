@@ -1,1 +1,0 @@
-// https://newsapi.org/v2/top-headlines?country=us&apiKey=YOUR_API_KEY'); // Replace with your API endpoint and key

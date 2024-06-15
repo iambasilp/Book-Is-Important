@@ -4,7 +4,7 @@ import About from "./components/About";
 import ReadNow from "./components/ReadNow";
 import BenifitsOfReading from "./components/BenifitsOfReading";
 import Counter from "./components/Counter";
-import NewsApi from "./components/NewsApi";
+import NewsApi from "./components/News/NewsApi";
 
 const App = () => {
   return (

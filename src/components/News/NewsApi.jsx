@@ -1,38 +1,38 @@
 import { useEffect, useState } from "react";
 import NewsApiDataCard from "./NewsApiDataCard";
+import {data} from '../../assets/Data'
 
 const NewsApi = () => {
-  const [data, setData] = useState([]);
-  const [error, setError] = useState(null);
-  const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    const fetchDataFromApi = async () => {
-      try {
-        const response = await fetch(
-          "https://newsapi.org/v2/everything?domains=wsj.com&apiKey=86bc2d8b350e4181954fd9714769a355"
-        );
-        if (!response.ok) {
-          throw new Error("Error here");
-        }
-        const responseData = await response.json();
-        setData(responseData.articles);
-      } catch (error) {
-        console.log(error);
-        setError(error);
-      } finally {
-        setLoading(false);
-      }
-    };
-    fetchDataFromApi();
-  }, []);
+ 
 
-  if (loading) {
-    return <h1>Loading here</h1>
-  }
-  if (error) {
-    return <h1>Error here</h1>;
-  }
+  // useEffect(() => {
+  //   const fetchDataFromApi = async () => {
+  //     try {
+  //       const response = await fetch(
+  //         "https://newsapi.org/v2/everything?domains=wsj.com&apiKey=86bc2d8b350e4181954fd9714769a355"
+  //       );
+  //       if (!response.ok) {
+  //         throw new Error("Error here");
+  //       }
+  //       const responseData = await response.json();
+  //       setData(responseData.articles);
+  //     } catch (error) {
+  //       console.log(error);
+  //       setError(error);
+  //     } finally {
+  //       setLoading(false);
+  //     }
+  //   };
+  //   fetchDataFromApi();
+  // }, []);
+
+  // if (loading) {
+  //   return <h1>Loading here</h1>
+  // }
+  // if (error) {
+  //   return <h1>Error here</h1>;
+  // }
   return (
     <div className="flex flex-wrap justify-center gap-6 p-4">
       {data.map((dataItem, index) => (

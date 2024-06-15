@@ -11,21 +11,19 @@ const NewsApiDataCard = ({
   urlToImage,
 }) => {
   return (
-    <div className="max-w-lg mx-auto my-4 p-4 bg-white rounded-lg shadow-md flex flex-col md:flex-row">
-      {urlToImage ? (
+    <div className="max-w-lg mx-auto my-4 bg-white rounded-lg flex flex-col">
+      {urlToImage ?(
         <img
-          className="w-full md:w-1/3 rounded-md object-cover"
+          className="w-full rounded-md object-cover"
           src={urlToImage}
           alt={title}
         />
-      ) : (
-        <img
-          className="w-full md:w-1/3 rounded-md object-cover"
-          src={
-            "https://i.seadn.io/gae/OGpebYaykwlc8Tbk-oGxtxuv8HysLYKqw-FurtYql2UBd_q_-ENAwDY82PkbNB68aTkCINn6tOhpA8pF5SAewC2auZ_44Q77PcOo870?auto=format&dpr=1&w=1000"
-          }
-        />
-      )}
+      ):
+       <img  
+        className="w-full  rounded-md object-cover"
+        src={"https://i.seadn.io/gae/OGpebYaykwlc8Tbk-oGxtxuv8HysLYKqw-FurtYql2UBd_q_-ENAwDY82PkbNB68aTkCINn6tOhpA8pF5SAewC2auZ_44Q77PcOo870?auto=format&dpr=1&w=1000"}
+      />
+      }
 
       <div className="flex flex-col justify-between p-4">
         <h2 className="text-xl font-bold mb-2">{title}</h2>

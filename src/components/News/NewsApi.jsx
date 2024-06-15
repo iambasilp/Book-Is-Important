@@ -10,7 +10,7 @@ const NewsApi = () => {
     const fetchDataFromApi = async () => {
       try {
         const response = await fetch(
-          "https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=86bc2d8b350e4181954fd9714769a355"
+          "https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=86bc2d8b350e4181954fd9714769a355"
         );
         if (!response.ok) {
           throw new Error("Error here");
@@ -27,27 +27,29 @@ const NewsApi = () => {
   }, []);
 
   if (loading) {
-    return <h1>Loding here ....</h1>
+    return <h1>Loading here</h1>
   }
   if (error) {
     return <h1>Error here</h1>;
   }
   return (
-    <div>
+    <div className="flex flex-wrap justify-center gap-6 p-4">
       {data.map((dataItem, index) => (
-        <NewsApiDataCard
-          key={index}
-          author={dataItem.author}
-          title={dataItem.title}
-          content={dataItem.content}
-          description={dataItem.description}
-          publishedAt={dataItem.publishedAt}
-          source={dataItem.source}
-          url={dataItem.url}
-          urlToImage={dataItem.urlToImage}
-        />
+        <div key={index} className="flex flex-col bg-white rounded-lg shadow-lg p-4 w-full md:w-1/4 ">
+          <NewsApiDataCard
+            author={dataItem.author}
+            title={dataItem.title}
+            content={dataItem.content}
+            description={dataItem.description}
+            publishedAt={dataItem.publishedAt}
+            source={dataItem.source}
+            url={dataItem.url}
+            urlToImage={dataItem.urlToImage}
+          />
+        </div>
       ))}
     </div>
+
   );
 };
 

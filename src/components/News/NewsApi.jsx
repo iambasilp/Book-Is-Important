@@ -3,7 +3,7 @@ import NewsApiDataCard from "./NewsApiDataCard";
 import {data} from '../../assets/Data'
 
 const NewsApi = () => {
-
+const [count,setCount] = useState(0)
  
 
   // useEffect(() => {
@@ -33,6 +33,15 @@ const NewsApi = () => {
   // if (error) {
   //   return <h1>Error here</h1>;
   // }
+  useEffect(()=>{
+     let interval = setInterval(()=>{
+       setCount(count+1)
+     },1000)
+     return ()=>{
+       clearInterval(interval)
+     }
+   
+  },[count])
   return (
     <div className="flex flex-wrap justify-center gap-6 p-4">
       {data.map((dataItem, index) => (
@@ -49,6 +58,7 @@ const NewsApi = () => {
           />
         </div>
       ))}
+     <h1>{count}</h1>
     </div>
 
   );

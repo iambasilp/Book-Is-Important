@@ -33,6 +33,7 @@ const [count,setCount] = useState(0)
   // if (error) {
   //   return <h1>Error here</h1>;
   // }
+  let limit = 0;
   useEffect(()=>{
      let interval = setInterval(()=>{
        setCount(count+1)
@@ -45,6 +46,7 @@ const [count,setCount] = useState(0)
   return (
     <div className="flex flex-wrap justify-center gap-6 p-4">
       {data.map((dataItem, index) => (
+        (index > limit) &&
         <div key={index} className="flex flex-col bg-white rounded-lg shadow-lg p-4 w-full md:w-1/4 ">
           <NewsApiDataCard
             author={dataItem.author}

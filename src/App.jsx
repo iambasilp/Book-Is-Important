@@ -6,6 +6,8 @@ import BenifitsOfReading from "./components/BenifitsOfReading";
 import Counter from "./components/Counter";
 import NewsApi from "./components/News/NewsApi";
 import Contact from "./components/Contact";
+import Favourite from "./components/Favourite/Favourite";
+
 const App = () => {
   return (
     <div className="bg-white w-full">
@@ -16,6 +18,7 @@ const App = () => {
       <BenifitsOfReading />
       <Counter />
       <NewsApi />
+      <Favourite />
       <Contact/>
     </div>
   );

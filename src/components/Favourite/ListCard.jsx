@@ -4,20 +4,29 @@ ListFavourite;
 const ListCard = ({ data }) => {
   const [favourite, setFavourite] = useState(false);
   const [likeFavourite, setLikedFavourite] = useState([]);
+
   function handleFavourite(index) {
+    const existed = likeFavourite.filter((item)=>{
+        if(item.idCategory === index){
+                return item
+        }
+    })
+    if(existed.length == 0){
+        let newfilterdArray = data.filter((item, i) => {
+            if (index == item.idCategory) {
+              return item;
+            }
+          });
+          console.log(newfilterdArray);
+      
+          setLikedFavourite([...newfilterdArray,...likeFavourite]);
+    }else{
+        alert("already favourited")
+    }
     console.log(index);
    
-    function getFilteredArray(){
-        
-    }
-    let newfilterdArray = data.filter((item, i) => {
-      if (index == i) {
-        return item;
-      }
-    });
-    console.log(newfilterdArray);
-
-    setLikedFavourite([...newfilterdArray,...likeFavourite]);
+    
+  
   }
   return (
     <div className=" ">
@@ -39,7 +48,7 @@ const ListCard = ({ data }) => {
                     {category.strCategory}
                     <a
                       onClick={() => {
-                        handleFavourite(index);
+                        handleFavourite(category.idCategory);
                       }}
                     >
                       {/* <i className="ri-heart-line text-[#E31B23]"></i> */}

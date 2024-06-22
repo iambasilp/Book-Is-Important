@@ -6,7 +6,10 @@ const ListCard = ({ data }) => {
   const [likeFavourite, setLikedFavourite] = useState([]);
   function handleFavourite(index) {
     console.log(index);
-
+   
+    function getFilteredArray(){
+        
+    }
     let newfilterdArray = data.filter((item, i) => {
       if (index == i) {
         return item;
@@ -14,7 +17,7 @@ const ListCard = ({ data }) => {
     });
     console.log(newfilterdArray);
 
-    setLikedFavourite([...likeFavourite,newfilterdArray]);
+    setLikedFavourite([...newfilterdArray,...likeFavourite]);
   }
   return (
     <div className=" ">

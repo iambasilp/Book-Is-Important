@@ -1,11 +1,11 @@
 import React from 'react'
 
 const ListFavourite = ({liked}) => {
-  const flatedLiked = liked.flat(Infinity)
+  
 
   return (
    <>
-    {flatedLiked.map((item)=>{
+    {liked.map((item)=>{
        return(
         <div  key={item.idCategory}className="max-w-sm rounded overflow-hidden shadow-lg p-4 bg-white">
         <img className="w-full" src={item.strCategoryThumb} alt={item.strCategory} />

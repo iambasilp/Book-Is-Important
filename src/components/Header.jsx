@@ -1,4 +1,5 @@
 import Contact from "./Contact";
+import ListFavourite from "./Favourite/ListFavourite";
 
 const Header = () => {
   return (
@@ -55,6 +56,11 @@ const Header = () => {
             <li>
               <a className="hover:bg-blue-100" href="#contact">
                 Contact Now
+              </a>
+            </li>
+            <li>
+              <a className="hover:bg-blue-100" href="#liked">
+                Liked
               </a>
             </li>
           </ul>
